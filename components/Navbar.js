@@ -10,38 +10,7 @@ import Deso from "deso-protocol";
 import { GoThreeBars } from "react-icons/go"
 import DesoConfig from "../lib/DesoConfig";
 
-const links = [
-    {
-        name: "Home",
-        link: "/",
-        id: "home",
-        priority: false
-    },
-    {
-        name: "Compose",
-        link: "/compose",
-        id: "compose",
-        priority: false
-    },
-    {
-        name: "Drafts",
-        link: "/drafts",
-        id: "drafts",
-        priority: false,
-    },
-    {
-        name: "Friends",
-        link: "/friends",
-        id: "awards",
-        priority: false
-    },
-    {
-        name: "Awards",
-        link: "/awards",
-        id: "awards",
-        priority: false
-    },
-];
+import links from "../lib/links";
 
 export default function Navbar({ homePage }) {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -55,9 +24,14 @@ export default function Navbar({ homePage }) {
         setDeso(myDeso);
 
         const myUser = myDeso.identity.getUser();
+        // console.log("User key!!: ", window.localStorage.getItem("deso_user_key"))
         if (window.localStorage.getItem("deso_user_key") !== "") {
             // setUserPublicKey(myUser.key)
             setLoggedIn(true)
+        }
+
+        if (window.localStorage.getItem("deso_user_key") == null) {
+            setLoggedIn(false)
         }
     }, [])
 
@@ -102,15 +76,22 @@ export default function Navbar({ homePage }) {
 
                 <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row lg:ml-auto mt-3 lg:mt-0`} data-test-id="navbar">
                     {
-                        links.map(({ name, link, priority, id }) =>
-                            <Link key={name} href={link}>
-                                <a
-                                    className={`${priority ? "text-orange-900 hover:bg-orange-300 hover:text-orange-300 text-center border border-solid border-orange-900 mt-1 lg:mt-0 lg:ml-1" : "text-orange-900 hover:bg-orange-600 hover:text-orange-300 "} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors `}
-                                    data-test-id={`navbar-${id}`}
-                                >
-                                    {name}
-                                </a>
-                            </Link>
+                        links.map(({ name, link, priority, id, isProtected }) => {
+                                if (!loggedIn && isProtected) {
+                                    return null;
+                                }
+                                
+                                return (
+                                    <Link key={name} href={link}>
+                                        <a
+                                            className={`${priority ? "text-orange-900 hover:bg-orange-300 hover:text-orange-300 text-center border border-solid border-orange-900 mt-1 lg:mt-0 lg:ml-1" : "text-orange-900 hover:bg-orange-600 hover:text-orange-300 "} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors `}
+                                            data-test-id={`navbar-${id}`}
+                                        >
+                                            {name}
+                                        </a>
+                                    </Link>
+                                )
+                            }    
                         )
                     }
 

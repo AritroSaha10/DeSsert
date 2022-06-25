@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        responsive:  'repeat(auto-fill, minmax(300px, 1fr))'
+      },
       gridTemplateRows: {
         page: 'auto 1fr auto'
       }
