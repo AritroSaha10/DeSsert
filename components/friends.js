@@ -13,28 +13,28 @@ const friends = () => {
         </div>
         <div className='flex flex-wrap flex-row items-center mt-2 bg-orange-400'>
             <div className='mx-10 my-5 p-10 bg-orange-500'>
-                <img src={url} class='rounded-3xl'></img>
+                <img src={url} className='rounded-3xl'></img>
                 <h3 className="text-orange-900">Friend 1</h3>
             </div>
             <div className='mx-10 p-10 bg-orange-500'>
-                <img src={url} class='rounded-3xl'></img>
+                <img src={url} className='rounded-3xl'></img>
                 <h3 className="text-orange-900">Friend 2</h3>
             </div>
             <div className='mx-10 p-10 bg-orange-500'>
-                <img src={url} class='rounded-3xl'></img>
+                <img src={url} className='rounded-3xl'></img>
                 <h3 className="text-orange-900">Friend 3</h3>
             </div>
             <div className='mx-10 p-10 bg-orange-500'>
-                <img src={url} class='rounded-3xl'></img>
+                <img src={url} className='rounded-3xl'></img>
                 <h3 className="text-orange-900">Friend 4</h3>
             </div>
             <div className='mx-10 p-10 bg-orange-500'>
-                <img src={url} class='rounded-3xl'></img>
+                <img src={url} className='rounded-3xl'></img>
                 <h3 className="text-orange-900">Friend 5</h3>
             </div>
-            <div className="text-5xl mr-5 text-orange-900">
+            <a href="google.com" className="text-5xl mr-5 text-orange-900">
                 <FaArrowAltCircleRight/>
-            </div>
+            </a>
         </div>
     </div>
   )

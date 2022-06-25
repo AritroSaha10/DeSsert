@@ -31,7 +31,13 @@ export default function RecipeView() {
           console.log(postObj)
 
           let username = postObj.PosterPublicKeyBase58Check.slice(0, 10);
-          let avatar = deso.user.getSingleProfilePicture(postObj.PosterPublicKeyBase58Check);
+          let avatar = "/images/default-pfp.jpg";
+
+          try {
+            deso.user.getSingleProfilePicture(postObj.PosterPublicKeyBase58Check);
+          } catch (e) {
+            console.error("Error when getting profile pic for author", e);
+          }
 
           if (postObj.ProfileEntryResponse && postObj.ProfileEntryResponse.Username) {
             username = postObj.ProfileEntryResponse.Username;
