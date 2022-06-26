@@ -8,3 +8,33 @@
         font-family: 'Inter';
     }
 }
+
+@layer components {
+    .hover-scale {
+        @apply transform transition hover:scale-105;
+    }
+
+    .react-markdown h1 {
+        @apply text-2xl
+    }
+
+    .react-markdown h2 {
+        @apply text-xl my-2
+    }
+
+    .react-markdown ol {
+        @apply list-decimal list-inside my-2
+    }
+
+    .react-markdown ol li {
+        @apply my-1
+    }
+
+    .react-markdown ul {
+        @apply list-disc list-inside my-2
+    }
+
+    .react-markdown ul li {
+        @apply my-1
+    }
+}
