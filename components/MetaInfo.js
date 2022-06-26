@@ -4,7 +4,7 @@ export default function MetaInfo({ name }) {
     console.log(name);
     return (
         <Head>
-            <title>{name} | Project Name</title>
+            <title>{name} | DeSsert</title>
         </Head>
     );
 }

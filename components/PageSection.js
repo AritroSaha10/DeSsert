@@ -6,12 +6,14 @@ const PageSection = ({
     subheading,
     imageSrc,
     reversed,
+    bg
 }) => {
     return (
         <section
             className={classNames(
-                "p-12 gap-12 flex justify-around md:items-center flex-col bg-white",
-                (reversed ? "md:flex-row-reverse" : "md:flex-row")
+                "p-12 gap-12 flex justify-around md:items-center flex-col",
+                (reversed ? "md:flex-row-reverse" : "md:flex-row"),
+                (bg ? bg : "bg-white")
         )}
         >
             <div className="space-y-2 max-w-[400px]">

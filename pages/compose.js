@@ -82,7 +82,7 @@ export default function CreateRecipe() {
 
             alert("Your recipe has been added!");
 
-            router.push(`/browse/${res.PostHashHex}`);
+            router.push(`/dashboard`);
         } catch (e) {
             alert("Something went wrong. Please try again.");
         }
@@ -93,6 +93,8 @@ export default function CreateRecipe() {
     return (
         <div className="flex flex-col">
             <MetaInfo name="Compose" />
+
+            <h1 className="text-4xl font-bold text-center mt-8 text-gray-700">Submit a Recipe!</h1>
 
             <form
                 className="flex flex-col gap-2 self-center mt-4 w-full p-16 pt-4 xl:w-5/6"

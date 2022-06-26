@@ -16,10 +16,10 @@ const ImageSlider = ({ slides }) => {
 
     return (
         <section className="slider flex flex-wrap items-center">
-            <FaArrowAltCircleLeft
-                className="text-5xl mr-7"
-                onClick={prevSlide}
-            />
+            <button onClick={prevSlide}>
+                <FaArrowAltCircleLeft className="text-5xl mr-7 cursor-pointer" />
+            </button>
+
             {SliderData.map((slide, index) => {
                 return (
                     <div
@@ -128,7 +128,9 @@ const ImageSlider = ({ slides }) => {
                     </div>
                 );
             })}
-            <FaArrowAltCircleRight className="text-5xl" onClick={nextSlide} />
+            <button onClick={nextSlide}>
+                <FaArrowAltCircleRight className="text-5xl cursor-pointer" />
+            </button>
         </section>
     );
 };

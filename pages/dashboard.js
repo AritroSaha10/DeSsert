@@ -81,7 +81,7 @@ export default function Dashboard() {
     return (
         <div>
             <MetaInfo name="Dashboard" />
-            <p className="text-5xl text-center font-bold my-12">My recipes</p>
+            <p className="text-5xl text-center font-bold my-12 text-orange-900">My recipes</p>
             {userRecipes.length ? (
                 <div className="grid grid-cols-responsive gap-8 p-4 pb-0">
                     {userRecipes.map((post) => (
@@ -89,14 +89,14 @@ export default function Dashboard() {
                     ))}
                 </div>
             ) : (
-                <h2 className="text-center text-xl my-6">
+                <h2 className="text-center text-xl my-6 text-orange-900">
                     There seem to be no recipes by you...
                 </h2>
             )}
 
             <Friends />
 
-            <p className="text-5xl text-center font-bold my-12">
+            <p className="text-5xl text-center font-bold my-12 text-orange-900">
                 Recent recipes
             </p>
 
@@ -107,7 +107,7 @@ export default function Dashboard() {
                     ))}
                 </div>
             ) : (
-                <h2 className="text-center text-xl my-6">
+                <h2 className="text-center text-xl my-6 text-orange-900">
                     There seem to be no recipes...
                 </h2>
             )}

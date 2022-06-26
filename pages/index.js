@@ -81,6 +81,7 @@ export default function Home() {
                 description="We strive to  make sure you get the best recipees and dishes so you can enjoy this wonderous summer"
                 subheading="Guaranteed taste of heaven"
                 imageSrc="https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                bg="bg-orange-200"
             />
 
             <PageSection
@@ -88,6 +89,7 @@ export default function Home() {
                 description="We provide a multitude of traditional and exotic cuisines from cultures all around the globe"
                 subheading="Explore different cultures"
                 imageSrc="https://images.unsplash.com/photo-1493807742375-fbc46d996e8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1104&q=80"
+                bg="bg-blue-300"
                 reversed
             />
             
@@ -96,6 +98,7 @@ export default function Home() {
                 description="We empower chefs by providing a platform indepedent from a central authority"
                 subheading="Completely decentralized"
                 imageSrc="https://images.unsplash.com/photo-1556911261-6bd341186b2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhhcHB5JTIwY2hlZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
+                bg="bg-gray-200"
             />
         </div>
     );

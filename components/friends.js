@@ -12,7 +12,7 @@ const friends = () => {
 
         <div>
             <div className="text-4xl font-bold text-orange-900 text-left mt-12 ml-10 mr-10">
-                <h1>Friends</h1>
+                <h1 className="mb-4 ml-4">Following</h1>
                 <div className="p-5 bg-orange-400 rounded-3xl">
                     <div className="flex flex-col items-center w-full">
                         <ImageSlider slides={SliderData} />

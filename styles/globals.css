@@ -23,7 +23,7 @@
     }
 
     .react-markdown ol {
-        @apply list-decimal list-inside my-2
+        @apply list-decimal list-inside my-2 float-left
     }
 
     .react-markdown ol li {
@@ -38,3 +38,4 @@
         @apply my-1
     }
 }
+

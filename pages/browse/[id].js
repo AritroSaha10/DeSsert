@@ -54,7 +54,7 @@ export default function RecipeView() {
     return post ? (
         <div className="h-full p-4 m-auto flex">
             <MetaInfo name={post.name ? post.name : "Recipe"} />
-            <section className="flex flex-col bg-white mx-auto my-4 p-4 lg:p-8 w-full max-w-[700px] rounded-2xl shadow-lg">
+            <section className="flex flex-col bg-white mx-auto my-4 p-4 lg:p-8 w-full max-w-[800px] rounded-2xl shadow-lg">
                 <Link href="/dashboard">
                     <p className="flex flex-row gap-1 items-center text-blue-500 hover:underline active:text-blue-700 cursor-pointer mb-2">
                         <IoArrowBack /> Go Back

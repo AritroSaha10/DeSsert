@@ -80,59 +80,61 @@ const RecipePostCard = ({
     console.log("post likes", likes, name);
 
     return (
-        <div className="bg-orange-400 rounded-lg overflow-hidden w-full p-4 shadow-md">
-            {thumbnail && (
-                <img
-                    src={thumbnail}
-                    alt={name}
-                    className="rounded-lg w-full max-h-[300px] object-cover"
-                />
-            )}
-            <Link href={`/browse/${id}`}>
-                <div className="mt-2 cursor-pointer">
-                    <h1 className="text-2xl font-semibold mb-1">{name}</h1>
-                    <p className="mb-4">
-                        {description
-                            ? description.slice(0, 50)
-                            : content.slice(0, 20)}
-                        ...
-                    </p>
-                </div>
-            </Link>
-            <div className="flex items-center justify-between space-x-2">
-                <div className="flex items-center space-x-2">
+        <div>
+            <div className="bg-orange-400 rounded-lg overflow-hidden w-full p-4 shadow-md">
+                {thumbnail && (
                     <img
-                        src={author.avatar}
-                        alt={author.username}
-                        className="h-8 w-8 rounded-full object-cover"
+                        src={thumbnail}
+                        alt={name}
+                        className="rounded-lg w-full max-h-[300px] object-cover"
                     />
-                    <h3>{author.username}</h3>
-                    {isPersonal ? (
-                        !isNft ? (
-                            <button
-                                onClick={mintNFT}
-                                className="bg-zinc-800 rounded-lg p-2 hover-scale text-white font-bold"
-                            >
-                                Mint NFT
-                            </button>
-                        ) : (
-                            <Tag color="white" backgroundColor="#0fb866">
-                                NFT
-                            </Tag>
-                        )
-                    ) : (
-                        <button
-                            onClick={likePostHandler}
-                            className="flex gap-2 items-center"
-                        >
-                            {isLiked ? (
-                                <AiFillHeart size={28} color="red" />
+                )}
+                <Link href={`/browse/${id}`}>
+                    <div className="mt-2 cursor-pointer">
+                        <h1 className="text-2xl font-semibold mb-1">{name}</h1>
+                        <p className="mb-4">
+                            {description
+                                ? description.slice(0, 50)
+                                : content.slice(0, 20)}
+                            ...
+                        </p>
+                    </div>
+                </Link>
+                <div className="flex items-center justify-between space-x-2">
+                    <div className="flex items-center space-x-2">
+                        <img
+                            src={author.avatar}
+                            alt={author.username}
+                            className="h-8 w-8 rounded-full object-cover"
+                        />
+                        <h3>{author.username}</h3>
+                        {isPersonal ? (
+                            !isNft ? (
+                                <button
+                                    onClick={mintNFT}
+                                    className="bg-zinc-800 rounded-lg p-2 hover-scale text-white font-bold"
+                                >
+                                    Mint NFT
+                                </button>
                             ) : (
-                                <AiOutlineHeart size={28} color="gray" />
-                            )}{" "}
-                            {likeCount}
-                        </button>
-                    )}
+                                <Tag color="white" backgroundColor="#0fb866">
+                                    NFT
+                                </Tag>
+                            )
+                        ) : (
+                            <button
+                                onClick={likePostHandler}
+                                className="flex gap-2 items-center"
+                            >
+                                {isLiked ? (
+                                    <AiFillHeart size={28} color="red" />
+                                ) : (
+                                    <AiOutlineHeart size={28} color="gray" />
+                                )}{" "}
+                                {likeCount}
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

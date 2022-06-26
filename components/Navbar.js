@@ -49,7 +49,7 @@ export default function Navbar({ homePage }) {
                 <div className="flex justify-between items-center">
                     <Link href="/">
                         <a className="font-bold text-xl text-orange-900">
-                            <h2>Project</h2>
+                            <h2>DeSsert</h2>
                         </a>
                     </Link>
 
